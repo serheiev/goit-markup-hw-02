@@ -1,8 +1,14 @@
 :root {
   --main-text-color: #212121;
   --second-text-color: #757575;
-  --hover-focus-color: #2196f3;
-  --footer-text-color: #ffffff;
+  --brend-color: #2196f3;
+  --light-text-color: #ffffff;
+  --dark-bg-color: #2f303a;
+  --light-bg-color: #ffffff;
+  --grey-bg-color: #f5f4fa;
+  /* --brend-color-hover: rgba(32, 145, 238, 0.8); */
+  --brend-color-hover: #2195f3d0;
+
 }
 
 body {
@@ -22,8 +28,6 @@ body {
   max-width: 1170px;
   height: 100%;
   margin: 0 auto;
-  /* не забыть убрать */
-  /* background-color: rgba(156, 64, 64, 25%); */
 }
 
 .header {
@@ -62,7 +66,7 @@ body {
 .menu-link:focus,
 .menu-link:active,
 .contacts-link:hover {
-  color: var(--hover-focus-color);
+  color: var(--brend-color);
 }
 
 .logo {
@@ -77,16 +81,16 @@ body {
 }
 
 .logo > span {
-  color: var(--hover-focus-color);
+  color: var(--brend-color);
 }
 
 .home {
-  background-color: #2f303a;
+  background-color: var(--dark-bg-color);
   height: 600px;
 }
 
 .home-title {
-  color: #fff;
+  color: var(--light-text-color);
   margin: 0 auto;
   padding-top: 200px;
   width: 696px;
@@ -103,8 +107,8 @@ body {
   border-radius: 3px;
   width: 200px;
   height: 50px;
-  background-color: var(--hover-focus-color);
-  color: #ffffff;
+  background-color: var(--brend-color);
+  color: var(--light-text-color);
   font-weight: 700;
   font-size: 1.2em;
   letter-spacing: 0.06em;
@@ -114,7 +118,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #216ef3;
+  background-color: var(--brend-color-hover);
 }
 
 .peculiarities-title {
@@ -162,7 +166,7 @@ body {
 }
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--grey-bg-color);
 }
 
 .team-title {
@@ -182,7 +186,7 @@ body {
 
 .team-list > li {
   list-style: none;
-  background-color: #fff;
+  background-color: var(--light-bg-color);
   width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -201,7 +205,7 @@ body {
 }
 
 .footer {
-    background-color: #2F303A;
+    background-color: var(--dark-bg-color);
 
 }
 
@@ -213,7 +217,7 @@ body {
 }
 
 .footer-logo {
-    color: var(--footer-text-color);
+    color: var(--light-text-color);
 }
 
 .footer-list {
@@ -227,16 +231,20 @@ body {
 
 
 
-.footer-list > li > a {
+.footer-link_color {
     text-decoration: none;
-    color: #757575;
+    color: var(--second-text-color);
     transition: all .3s;
 }
 
-.footer-list > li > a:hover {
-    color: #ffffff;
+.footer-address_color {
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: .3s;
 }
 
-.footer-address > ul > li > .address-color {
-    color: #f5f4fa;
+.footer-link_color:hover,
+.footer-address_color:hover {
+    color: var(--brend-color);
 }
+
